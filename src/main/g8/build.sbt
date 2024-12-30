@@ -25,6 +25,11 @@ ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
 /* Publish settings */
 ThisBuild / publishMavenStyle := true
 
+/* Compiler settings */
+ThisBuild / scalacOptions ++= Seq(
+  "-Wunused",
+)
+
 lazy val tests = project
   .in(file("tests"))
   .dependsOn(core)
